@@ -1,17 +1,177 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Tsunami</title><style>:root{--bg:#F2F2F7;--card:#FFFFFF;--ink:#111114;--muted:#55555C;--accent:#0B6670;--foam:#EAF7F7}@media (prefers-color-scheme:dark){:root{--bg:#000000;--card:#1C1C1E;--ink:#F5F5F7;--muted:#AEAEB4;--accent:#5BBFC6}}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,system-ui,sans-serif}main{max-width:680px;margin:0 auto;padding:40px 16px}.card{background:var(--card);border-radius:16px;padding:24px;margin:16px 0}h1,h2{line-height:1.2}h2{font-size:1.15em;margin-top:1.4em}h2:first-child{margin-top:0}a{color:var(--accent)}p.m{color:var(--muted)}svg.icon{width:96px;height:96px;display:block}code{font:0.9em ui-monospace,Menlo,monospace}</style></head><body><main>
-<svg class="icon" viewBox="0 0 1024 1024" role="img" aria-label="Tsunami app icon"><clipPath id="r"><rect width="1024" height="1024" rx="229"/></clipPath><g clip-path="url(#r)"><rect width="1024" height="1024" fill="#0B6670"/><path fill="#EAF7F7" d="M0 1024V794C250 794 300 364 520 364C730 364 870 424 870 534C870 614 790 659 730 639C680 624 640 564 650 514C560 574 570 704 660 754C760 804 900 844 1024 844V1024Z"/></g></svg>
-<h1>Tsunami</h1>
-<p class="m">Practise the sciences of medical-school admission by touch: uncover the labels of a diagram, build equations from tiles, put pathways in order and draw them from memory, scheduled with spaced repetition. Offline, no account.</p>
-<div class="card">
-<h2>Support</h2>
-<p>Questions, a bug, or a card that looks wrong? Open an issue on <a href="https://github.com/idossha/tsunami-site/issues">the support page</a>. For a card, please include its title and the deck it is in; for a bug, your iPhone model and iOS version.</p>
-<h2>Backing up your progress</h2>
-<p>Your progress lives only on your iPhone (and in your device backups). Settings → Export progress saves it as a file you can keep in Files or send to yourself; Settings → Restore progress reads it back, on the same phone or a new one.</p>
-<h2>Your own decks</h2>
-<p>Tsunami opens deck files ending in <code>.tsunamideck</code>. Open one from Files, AirDrop or another app's share sheet and it appears in the Library; progress on a deck follows its deck and card ids, so importing an updated version keeps your history. A deck with an error is not imported.</p>
-<h2>Credits</h2>
-<p>The built-in starter deck is made from OpenStax textbooks (Rice University), used under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> licence. Every card cites the page it comes from, and every image shows its creator, source and licence. Settings → Sources and licences lists them all. OpenStax does not endorse this app.</p>
-<h2>Privacy</h2>
-<p>Tsunami collects no data and makes no network requests. <a href="privacy.html">Privacy policy</a>.</p>
-<p class="m">MCAT® is a registered trademark of the Association of American Medical Colleges (AAMC), which is not affiliated with and does not endorse this app.</p>
-</div></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B6670">
+<title>Tsunami: study the sciences by touch</title>
+<meta name="description" content="An iPhone app for the sciences of medical-school admission, answered by touch: diagrams, equations, choices, sequences and sketches, scheduled with spaced repetition. Free, offline, no account.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><nav class="wrap" aria-label="Site">
+<a class="brand" href="./"><img src="icon.svg" width="28" height="28" alt="">Tsunami</a>
+<ul><li><a href="support.html">Support</a></li><li><a href="credits.html">Credits</a></li><li><a href="privacy.html">Privacy</a></li></ul>
+</nav></header>
+<main id="main">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Tsunami</h1>
+      <p class="lead">Study the sciences of medical-school admission with your fingers: uncover a diagram's labels, build an equation from tiles, put a pathway in order, draw it from memory.</p>
+      <p class="facts">An iPhone app with a built-in deck of 2,508 cards in 114 units, made from openly licensed textbooks and checked against them. Free, offline, no account.</p>
+      <p class="status">In private beta. The App Store comes next.</p>
+    </div>
+    <figure class="phone"><div class="screen"><picture><source srcset="shots/hero-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/hero-light.webp" width="540" height="1173" alt="A diagram card answered: Tap Mitochondria on a figure of an animal cell whose labels are covered; the tapped cover is right and the mitochondria label is uncovered." loading="lazy" decoding="async"></picture></div></figure>
+  </div>
+  <svg class="wave" viewBox="0 0 1200 72" preserveAspectRatio="none" aria-hidden="true"><path d="M0 72V40C150 40 210 6 360 6S560 52 720 52 930 14 1060 14C1130 14 1170 26 1200 34V72Z"/></svg>
+</div>
+
+<section class="after-hero" aria-labelledby="ways">
+  <div class="wrap">
+    <div class="intro">
+      <h2 id="ways">Answer with a finger, not a keyboard</h2>
+      <p>Much of what the exam asks is a picture, a formula or a process, and typing is a poor way to recall any of them. Tsunami gives each its own way to answer, and after every answer, an explanation.</p>
+    </div>
+    <div class="ways">
+      <article class="way">
+        <div>
+          <p class="verb">Tap</p>
+          <h3>Diagrams</h3>
+          <p>A textbook figure with its labels covered. Name the highlighted structure and tap to uncover it, or read a name and tap where it belongs. Pinch, pan or open the figure full screen.</p>
+        </div>
+        <div class="pair">
+          <figure><div class="screen"><picture><source srcset="shots/diagram-q-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/diagram-q-light.webp" width="540" height="1173" alt="Question: the digestive system with every label covered." loading="lazy" decoding="async"></picture></div><figcaption>Question</figcaption></figure>
+          <figure><div class="screen"><picture><source srcset="shots/diagram-a-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/diagram-a-light.webp" width="540" height="1173" alt="Answer: the parotid gland uncovered, with what it does and the figure&#x27;s credit." loading="lazy" decoding="async"></picture></div><figcaption>Answer</figcaption></figure>
+        </div>
+      </article>
+      <article class="way">
+        <div>
+          <p class="verb">Fill</p>
+          <h3>Equations</h3>
+          <p>The formula is typeset with blanks. Tap tiles into them, then Check. The answer shows the full formula, marks any blank you got wrong and names every symbol.</p>
+        </div>
+        <div class="pair">
+          <figure><div class="screen"><picture><source srcset="shots/equation-q-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/equation-q-light.webp" width="540" height="1173" alt="Question: cardiac output equals two blanks, with tiles below." loading="lazy" decoding="async"></picture></div><figcaption>Question</figcaption></figure>
+          <figure><div class="screen"><picture><source srcset="shots/equation-a-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/equation-a-light.webp" width="540" height="1173" alt="Answer: CO equals HR times SV, with each symbol named and an explanation." loading="lazy" decoding="async"></picture></div><figcaption>Answer</figcaption></figure>
+        </div>
+      </article>
+      <article class="way">
+        <div>
+          <p class="verb">Choose</p>
+          <h3>Choices</h3>
+          <p>A question, often a short scenario with a table or a figure to reason through. One tap answers. Then every option says why it is right or what makes it wrong.</p>
+        </div>
+        <div class="pair">
+          <figure><div class="screen"><picture><source srcset="shots/choice-q-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/choice-q-light.webp" width="540" height="1173" alt="Question: a table of reaction rates at two concentrations, asking the order of the reaction." loading="lazy" decoding="async"></picture></div><figcaption>Question</figcaption></figure>
+          <figure><div class="screen"><picture><source srcset="shots/choice-a-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/choice-a-light.webp" width="540" height="1173" alt="Answer: the right option marked, the wrong pick marked, and a reason under every option." loading="lazy" decoding="async"></picture></div><figcaption>Answer</figcaption></figure>
+        </div>
+      </article>
+      <article class="way">
+        <div>
+          <p class="verb">Drag</p>
+          <h3>Sequences</h3>
+          <p>The steps of a process, shuffled. Drag them into order, or tap a row and then its place. Check marks each step right or wrong and shows the right order.</p>
+        </div>
+        <div class="pair">
+          <figure><div class="screen"><picture><source srcset="shots/sequence-q-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/sequence-q-light.webp" width="540" height="1173" alt="Question: twelve levels of biological organization in shuffled order." loading="lazy" decoding="async"></picture></div><figcaption>Question</figcaption></figure>
+          <figure><div class="screen"><picture><source srcset="shots/sequence-a-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/sequence-a-light.webp" width="540" height="1173" alt="Answer: each row marked right or wrong by its position." loading="lazy" decoding="async"></picture></div><figcaption>Answer</figcaption></figure>
+        </div>
+      </article>
+      <article class="way">
+        <div>
+          <p class="verb">Draw</p>
+          <h3>Sketches</h3>
+          <p>Draw a pathway or a structure from memory on white paper, then reveal a picture of the answer and lay your drawing over it. A checklist says what a full answer includes. Nothing you draw is saved.</p>
+        </div>
+        <div class="pair">
+          <figure><div class="screen"><picture><source srcset="shots/sketch-q-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/sketch-q-light.webp" width="540" height="1173" alt="Question: a blank canvas under the prompt to draw the urea cycle." loading="lazy" decoding="async"></picture></div><figcaption>Question</figcaption></figure>
+          <figure><div class="screen"><picture><source srcset="shots/sketch-a-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/sketch-a-light.webp" width="540" height="1173" alt="Answer: the reference picture of the urea cycle with the student&#x27;s drawing over it." loading="lazy" decoding="async"></picture></div><figcaption>Answer</figcaption></figure>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section aria-labelledby="reading">
+  <div class="wrap row two">
+    <div class="prose">
+      <h2 id="reading">Reading, in a rotation of its own</h2>
+      <p>The deck also holds 36 reading passages from the humanities and the social sciences, each with questions on what it says, what follows from it and how its reasoning applies to a new case. Each passage is cut from a public-domain or openly licensed work, whole sentences in the author's order, never rewritten.</p>
+      <p>Passages are practice, not memory, so they are not scheduled like cards. The next one is always one you have not read yet; once you have read them all, they come round again oldest first. A clock counts up beside a ten-minute mark and stops nothing. The right answers and the reason for every option appear when you finish.</p>
+    </div>
+    <div class="pair">
+      <figure><div class="screen"><picture><source srcset="shots/reading-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/reading-light.webp" width="540" height="1173" alt="The Reading tab: the next passage with a Read button, how many passages are finished, the share answered right the first time, and the passages in turn." loading="lazy" decoding="async"></picture></div><figcaption>The Reading tab</figcaption></figure>
+      <figure><div class="screen"><picture><source srcset="shots/passage-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/passage-light.webp" width="540" height="1173" alt="A passage open: its field and title, the text, a clock counting beside a ten-minute mark, and a switch between the passage and its questions." loading="lazy" decoding="async"></picture></div><figcaption>A passage</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section aria-labelledby="day">
+  <div class="wrap row two">
+    <div class="prose">
+      <h2 id="day">A little each day</h2>
+      <ol class="steps">
+        <li><strong>Open Today and tap Study.</strong> The cards due for review come first.</li>
+        <li><strong>New cards follow the path:</strong> 114 units in teaching order, from the basics up, each ending in cards that ask you to use what it taught. New cards arrive up to a daily limit you set.</li>
+        <li><strong>Grade each answer.</strong> Every button shows when the card will come back. A card that was checked and answered wrong counts as Again.</li>
+      </ol>
+      <ul class="grades" aria-label="The four grades"><li class="g1">Again</li><li class="g2">Hard</li><li class="g3">Good</li><li class="g4">Easy</li></ul>
+      <p>Scheduling is FSRS, the spaced-repetition algorithm Anki also offers: each card returns shortly before you would forget it, so reviews stay few. Want a topic right now? Study any unit, section or topic on top of the day's suggestion; its new cards are extra and the path stays where it was. Statistics show your streak, a calendar, the reviews coming up and how much you remember.</p>
+    </div>
+    <div class="pair">
+      <figure><div class="screen"><picture><source srcset="shots/path-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/path-light.webp" width="540" height="1173" alt="The path: the deck&#x27;s units in order, finished ones ticked and the current one marked." loading="lazy" decoding="async"></picture></div><figcaption>The path</figcaption></figure>
+      <figure><div class="screen"><picture><source srcset="shots/statistics-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/statistics-light.webp" width="540" height="1173" alt="Statistics: today&#x27;s answers, the streak, a 26-week calendar and the reviews due in the next 30 days." loading="lazy" decoding="async"></picture></div><figcaption>Statistics, shown with demonstration history</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="trust">
+  <div class="wrap row">
+    <div class="prose">
+      <h2 id="trust">Every answer explained, every card checked</h2>
+      <p>The back of every card explains the answer, the same way whether you were right or wrong, and names the textbook section it comes from. A right answer is no reason to explain less: a guess is right a quarter of the time.</p>
+      <p>Every card is written by one reader and checked against its textbook section by a second reader who did not write it. Every picture is checked against its section too. A card or picture changed after its check is checked again before it ships.</p>
+      <p>A diagram's labels are the labels printed in the figure. Under every picture is who made it, where it comes from and its licence. The 49 sources and their licences are on the <a href="credits.html">credits page</a>.</p>
+    </div>
+    <figure class="one"><div class="screen"><picture><source srcset="shots/explained-dark.webp" media="(prefers-color-scheme: dark)"><img src="shots/explained-light.webp" width="540" height="1173" alt="The welcome page Every answer is explained, with the four grade buttons." loading="lazy" decoding="async"></picture></div></figure>
+  </div>
+</section>
+
+<section aria-labelledby="free">
+  <div class="wrap">
+    <div class="promise prose">
+      <h2 id="free">Free, and nothing collected</h2>
+      <ul>
+        <li>Free. No ads, no purchases, no subscription.</li>
+        <li>No account. The app makes no network requests and works offline.</li>
+        <li>Your progress stays on your iPhone. You can export it as a file and restore it.</li>
+        <li>You can open your own decks in the same format.</li>
+      </ul>
+      <p class="small note">This website loads nothing from anyone else either. Read the <a href="privacy.html">privacy policy</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="where">
+  <div class="wrap"><div class="prose">
+    <h2 id="where">Where it stands</h2>
+    <p>Tsunami is in a private beta on iPhone. The App Store comes next; there is no date yet, and this page will link to it once it is there. It is a way to study, and it promises no score.</p>
+    <p>Found a wrong card or a bug? <a href="support.html">Here is how to report it.</a></p>
+  </div></div>
+</section>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p>Tsunami is free: no ads, no purchases, no account, and nothing is collected.</p>
+<p><a href="./">Home</a> <a href="support.html">Support</a> <a href="credits.html">Credits</a> <a href="privacy.html">Privacy policy</a> <a href="https://github.com/idossha/tsunami-site/issues">Report a problem</a></p>
+<p class="small">MCAT® is a registered trademark of the Association of American Medical Colleges (AAMC), which is not affiliated with and does not endorse this app.</p>
+</div></footer>
+</body>
+</html>
